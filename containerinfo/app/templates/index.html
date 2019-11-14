@@ -1,0 +1,13 @@
+{% block content %}
+    <center>
+        <h1>UTC Time: {{ current_time.strftime('%Y/%m/%d - %H:%M:%S') }}</h1>
+        <h2>Hostname: {{ hostname }}</h2>
+        <h2>IP Address: {{ ip }}</h2>
+        <h2>CPU count: {{ cpu }}</h2>
+        <h2>OS: {{ system }}</h2>
+        {% if distribution %}
+            <h2>Distribution: {{ distribution }}</h2>
+        {% endif %}
+        <h2>Architecture: {{ platform }}</h2>
+    </center>
+{% endblock %}
